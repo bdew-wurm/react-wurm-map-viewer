@@ -1,5 +1,7 @@
 This is a modified version of Jonneh web map viwer for Wurm Unlimited, as a react component.
 
+Requires version 0.4 or later of Jonneh map generator from https://github.com/bdew-wurm/jonneh-mapgen
+
 ---
 
 ```
