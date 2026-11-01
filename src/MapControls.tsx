@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import type { MapMode } from "./types";
 import styles from "./MapViewer.module.scss";
@@ -24,7 +26,7 @@ export const MapControls: React.FC<Props> = ({
   <>
     <div className={`${styles.controls} ${styles.zoomControls}`}>
       <button type="button" aria-label="Zoom in" onClick={onZoomIn}>+</button>
-      <button type="button" aria-label="Zoom out" onClick={onZoomOut}>−</button>
+      <button type="button" aria-label="Zoom out" onClick={onZoomOut}>âˆ’</button>
     </div>
 
     <div className={`${styles.controls} ${styles.modeControls}`} aria-label="Map style">

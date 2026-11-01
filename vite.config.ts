@@ -15,6 +15,7 @@ export default defineConfig({
       cssFileName: "style",
     },
     rollupOptions: {
+      output: { banner: "\"use client\";" },
       external: [/^react($|\/)/, /^react-dom($|\/)/, /^react-icons($|\/)/],
     },
   },

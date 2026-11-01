@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useEffect, useRef } from "react";
 import type { Point } from "./types";
 import styles from "./MapViewer.module.scss";

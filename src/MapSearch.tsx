@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useMemo } from "react";
 import { FaSearch } from "react-icons/fa";
 import type { MapMarker } from "./types";

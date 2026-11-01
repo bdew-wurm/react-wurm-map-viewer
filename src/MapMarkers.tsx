@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import type { MapData, MapMode, Point } from "./types";
 import styles from "./MapViewer.module.scss";
