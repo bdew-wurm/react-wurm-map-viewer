@@ -1,0 +1,246 @@
+.viewer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  overflow: hidden;
+  color: #444;
+  background-color: #383e71;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 11px;
+  cursor: grab;
+  touch-action: none;
+  user-select: none;
+}
+
+.viewer:active {
+  cursor: grabbing;
+}
+
+.map {
+  position: absolute;
+  image-rendering: pixelated;
+  pointer-events: none;
+}
+
+.markers {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.marker {
+  position: absolute;
+  width: 256px;
+  height: 256px;
+  text-align: center;
+}
+
+.label {
+  position: relative;
+  top: -16px;
+  display: inline;
+  padding: 1px 2px;
+  color: #fff;
+  background-color: rgb(0 0 0 / 50%);
+  line-height: 256px;
+  white-space: nowrap;
+}
+
+.label::after {
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  width: 0;
+  height: 0;
+  margin-left: -8px;
+  border-top: 8px solid rgb(0 0 0 / 50%);
+  border-right: 8px solid transparent;
+  border-left: 8px solid transparent;
+  content: "";
+}
+
+.permanent {
+  color: #ff8800;
+}
+
+.border {
+  position: absolute;
+  box-sizing: content-box;
+  border: 1px solid rgb(255 255 255 / 35%);
+  border-radius: 1px;
+}
+
+.focusZoneBorder {
+  border-color: red;
+  background-color: #f44;
+  opacity: 0.2;
+}
+
+.focusZoneLabel {
+  color: #f44;
+}
+
+.controls {
+  position: absolute;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  width: 32px;
+  overflow: hidden;
+  border-radius: 2px;
+  box-shadow: 0 0 8px rgb(0 0 0 / 35%);
+}
+
+.controls button {
+  width: 32px;
+  height: 33px;
+  padding: 0;
+  border: 0;
+  border-bottom: 1px solid #bbb;
+  background-color: #fff;
+  color: #444;
+  font: inherit;
+  font-size: 20px;
+  line-height: 32px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.controls button:hover {
+  background-color: #eee;
+}
+
+.controls button:active {
+  padding-top: 1px;
+}
+
+.zoomControls {
+  top: 16px;
+  left: 16px;
+}
+
+.modeControls {
+  top: 96px;
+  left: 16px;
+}
+
+.modeControls button {
+  font-size: 12px;
+}
+
+.controls .selected {
+  background-color: #d5e9ff;
+  cursor: default;
+}
+
+.controls .selected:hover {
+  background-color: #d5e9ff;
+}
+
+.search {
+  position: absolute;
+  z-index: 3;
+  top: 16px;
+  left: 64px;
+  display: flex;
+  border-radius: 2px;
+  background-color: #fff;
+  box-shadow: 0 0 8px rgb(0 0 0 / 35%);
+}
+
+.search input {
+  width: 268px;
+  height: 28px;
+  padding: 6px;
+  border: 0;
+  border-radius: 2px;
+  outline-offset: -2px;
+  background-color: #fff;
+  color: #444;
+  font: inherit;
+  border: none;
+}
+
+.search > button {
+  display: grid;
+  width: 28px;
+  height: 28px;
+  place-items: center;
+  border: 0;
+  border-radius: 2px;
+  background: #fff;
+  color: #444;
+  cursor: pointer;
+}
+
+.search > button:hover {
+  background-color: #eee;
+}
+
+.autocomplete {
+  position: absolute;
+  top: 28px;
+  left: 4px;
+  width: 268px;
+  max-height: min(60vh, 420px);
+  overflow: auto;
+  border-radius: 0 0 2px 2px;
+  background-color: #fff;
+}
+
+.autocomplete button {
+  display: block;
+  width: 100%;
+  padding: 5px;
+  border: 0;
+  background: transparent;
+  color: #444;
+  font: inherit;
+  font-size: 14px;
+  text-align: left;
+  cursor: pointer;
+}
+
+.autocomplete button:hover {
+  background-color: #8eaeee;
+}
+
+.coordinates,
+.status {
+  position: absolute;
+  z-index: 2;
+  bottom: 16px;
+  left: 16px;
+  padding: 3px;
+  border-radius: 2px;
+  background-color: #fff;
+  box-shadow: 0 0 8px rgb(0 0 0 / 35%);
+}
+
+.status {
+  top: 16px;
+  right: 16px;
+  bottom: auto;
+  left: auto;
+  max-width: min(420px, calc(100% - 32px));
+  padding: 8px 12px;
+  color: #7d1717;
+}
+
+.error {
+  padding: 1rem;
+  border: 1px solid #b42318;
+  color: #b42318;
+  background: #fef3f2;
+}
+
+@media (max-width: 480px) {
+  .search input {
+    width: min(56vw, 268px);
+  }
+
+  .autocomplete {
+    width: min(56vw, 268px);
+  }
+}
