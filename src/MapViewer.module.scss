@@ -105,6 +105,9 @@
   line-height: 32px;
   text-align: center;
   cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .controls button:hover {
@@ -162,7 +165,7 @@
   border: none;
 }
 
-.search > button {
+.search>button {
   display: grid;
   width: 28px;
   height: 28px;
@@ -174,7 +177,7 @@
   cursor: pointer;
 }
 
-.search > button:hover {
+.search>button:hover {
   background-color: #eee;
 }
 

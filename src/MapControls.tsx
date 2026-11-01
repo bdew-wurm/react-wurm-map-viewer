@@ -3,6 +3,7 @@
 import React from "react";
 import type { MapMode } from "./types";
 import styles from "./MapViewer.module.scss";
+import { FaMinus, FaPlus } from "react-icons/fa";
 
 interface Props {
   mode: MapMode;
@@ -25,8 +26,8 @@ export const MapControls: React.FC<Props> = ({
 }) => (
   <>
     <div className={`${styles.controls} ${styles.zoomControls}`}>
-      <button type="button" aria-label="Zoom in" onClick={onZoomIn}>+</button>
-      <button type="button" aria-label="Zoom out" onClick={onZoomOut}>âˆ’</button>
+      <button type="button" aria-label="Zoom in" onClick={onZoomIn}><FaPlus /></button>
+      <button type="button" aria-label="Zoom out" onClick={onZoomOut}><FaMinus /></button>
     </div>
 
     <div className={`${styles.controls} ${styles.modeControls}`} aria-label="Map style">
